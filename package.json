@@ -1,0 +1,32 @@
+{
+  "name": "leaflet-jquery",
+  "version": "0.1.0",
+  "description": "Leaflet map wrapper for quick setup and interaction based on OP",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ffdevv/leaflet-jquery.git"
+  },
+  "keywords": [
+    "leaflet",
+    "map"
+  ],
+  "author": "Federico Fogo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ffdevv/leaflet-jquery/issues"
+  },
+  "homepage": "https://github.com/ffdevv/leaflet-jquery#readme",
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "leaflet": "^1.7.1",
+    "leaflet.markercluster": "^1.5.3"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.9.2"
+  }
+}
