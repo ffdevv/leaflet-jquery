@@ -1,7 +1,7 @@
 class State {
-  constructor(){
+  constructor() {
     // contains the name of the state (can be tweaked to customize behaviours)
-    this.name = '';
+    this.name = "";
     // contains arguments that shall be used in this state.name ctx
     this.args = {};
     // contains reference to ALL the layers displayed in the map
@@ -9,51 +9,59 @@ class State {
     // contains reference to ALL the features groups displayed in the map
     this.layerGroups = [];
   }
-  
-  setNamedArgs = function(name, args){
+
+  setNamedArgs(name, args) {
     this.args[name] = args;
   }
-  
-  getNamedArgs = function(name){
+
+  getNamedArgs(name) {
     return this.args[name];
   }
-  
-  getArgs = function(){
-    if (! this.name){ return {}; }
+
+  getArgs() {
+    if (!this.name) {
+      return {};
+    }
     return this.getNamedArgs(this.name);
   }
-  
-  addLayer = function(layer){
+
+  addLayer(layer) {
     this.layers.push(layer);
   }
-  rmLayer = function(layer){
+  rmLayer(layer) {
     let layerId = layer._leaflet_id;
-    if (layerId === undefined){return false;}
-    for (let i=0; i < this.layers.length; i++){
-      if (this.layers[i]._leaflet_id == layerId){
+    if (layerId === undefined) {
+      return false;
+    }
+    for (let i = 0; i < this.layers.length; i++) {
+      if (this.layers[i]._leaflet_id === layerId) {
         this.layers.splice(i, 1);
         return true;
       }
     }
   }
-  resetLayers = function(){ this.layers = []; }
-  
-  addLayerGroup = function(layerGroup){
+  resetLayers() {
+    this.layers = [];
+  }
+
+  addLayerGroup(layerGroup) {
     this.layerGroups.push(layerGroup);
   }
-  rmLayerGroup = function(layerGroup){
+  rmLayerGroup(layerGroup) {
     let layerId = layerGroup._leaflet_id;
-    if (layerId === undefined){return false;}
-    for (let i=0; i < this.layers.length; i++){
-      if (this.layerGroups[i]._leaflet_id == layerId){
+    if (layerId === undefined) {
+      return false;
+    }
+    for (let i = 0; i < this.layers.length; i++) {
+      if (this.layerGroups[i]._leaflet_id === layerId) {
         this.layerGroups.splice(i, 1);
         return true;
       }
     }
   }
-  resetLayerGroups = function(){ this.layerGroups = []; }
+  resetLayerGroups() {
+    this.layerGroups = [];
+  }
 }
 
-export {
-  State,
-};
+export default State;

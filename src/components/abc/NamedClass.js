@@ -1,7 +1,13 @@
 class NamedClass {
-  static get _name() { return "NamedClass"; }
-  static getClassName(){ return this._name; }
-  getClassName(){ return this.constructor.getClassName(); }
+  static get _name() {
+    return "NamedClass";
+  }
+  static getClassName() {
+    return this._name;
+  }
+  getClassName() {
+    return this.constructor.getClassName();
+  }
 }
 
 // derive in this way:
@@ -11,6 +17,4 @@ class NamedClass {
   }
 */
 
-export {
-  NamedClass,
-};
+export default NamedClass;

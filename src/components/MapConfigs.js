@@ -1,4 +1,4 @@
-import { 
+import {
   mostraCoordinateWGS84_CH03,
   copiaCoordinateWGS84,
   copiaCoordinateCH03,
@@ -6,31 +6,27 @@ import {
   apriSuSwisstopo,
   centraMappaQui,
   separatore
-} from './auxiliary/contextmenuItems.js';
+} from "./auxiliary/contextmenuItems.js";
 
-const MapConfigs = {
-  default : {
-    // zooming
-    minZoom: 0,
-    maxZoom: 20,
-    center: [46.189807600394904,9.0149645189757578],
-    zoom: 12,
-    
-    // menu
-    contextmenu: true,
-    contextmenuWidth: 140,
-    contextmenuItems: [
-      mostraCoordinateWGS84_CH03,
-      copiaCoordinateWGS84,
-      copiaCoordinateCH03,
-      separatore,
-      apriSuGoogleMaps,
-      apriSuSwisstopo,
-      centraMappaQui
-    ]
-  }
+const defaultMapConfig = {
+  // zooming
+  minZoom: 0,
+  maxZoom: 20,
+  center: [46.189807600394904, 9.0149645189757578],
+  zoom: 12,
+
+  // menu
+  contextmenu: true,
+  contextmenuWidth: 140,
+  contextmenuItems: [
+    mostraCoordinateWGS84_CH03,
+    copiaCoordinateWGS84,
+    copiaCoordinateCH03,
+    separatore,
+    apriSuGoogleMaps,
+    apriSuSwisstopo,
+    centraMappaQui
+  ]
 };
 
-export {
-  MapConfigs,
-};
+export { defaultMapConfig };

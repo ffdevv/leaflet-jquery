@@ -11,10 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/ffdevv/leaflet-jquery.git"
   },
-  "keywords": [
-    "leaflet",
-    "map"
-  ],
+  "keywords": ["leaflet", "map"],
   "author": "Federico Fogo",
   "license": "MIT",
   "bugs": {
