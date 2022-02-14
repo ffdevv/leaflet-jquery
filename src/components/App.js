@@ -21,7 +21,7 @@ import './constants.js';
 class App extends WithErrors{
   static get _name() { return 'App'; }
   
-  _setupEnv = () => {  
+  _setupEnv(){  
     // checking html
     if (! checkDialogMarkup()){
       throw this._runtimeErr('HTML missing or having too many dialog markups');
@@ -90,6 +90,9 @@ class App extends WithErrors{
     
     // init tile layers
     this.tilesProviders.forEach(tp => (this._initTileLayer(tp)));
+      
+    // default map
+    // init like https://gist.github.com/d3noob/7828823
   }
 }
 
